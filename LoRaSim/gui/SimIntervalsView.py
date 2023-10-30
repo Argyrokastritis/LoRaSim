@@ -21,6 +21,8 @@ class SimIntervalsView(QtWidgets.QFrame):
         self.add_btn = self.createAddBtn()
         self.refreshIntTable()
 
+        self.add_btn.setStyleSheet("background-color: #FFFFED")
+
     def createTitle(self):
         title = QtWidgets.QLabel()
         title.setText("Simulation intervals:")

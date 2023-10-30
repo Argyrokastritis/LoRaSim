@@ -24,7 +24,10 @@ class HomeWindow(QtWidgets.QWidget):
         self.setLayout(QtWidgets.QVBoxLayout())
         self.simIntView = self.createSimIntView()
         self.plotOptPanel = self.createPlotOptPanel()
+
         self.start_btn = self.createStartBtn()
+        self.start_btn.setStyleSheet("background-color: #F4C2C2")
+
 
     def createSimIntView(self):
         s = SimIntervalsView(self.simulator)
@@ -41,6 +44,7 @@ class HomeWindow(QtWidgets.QWidget):
         b.setText("Start Simulation")
         b.setIcon(QtGui.QIcon.fromTheme('media-playback-start'))
         b.clicked.connect(self.runSimulation)
+
         self.layout().addWidget(b)
         return b
 
