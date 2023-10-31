@@ -91,8 +91,9 @@ class AddSimIntWindow(QtWidgets.QDialog):
         csv_exporter.ExportMarkovToCSV()
 
         # Generates new Markov models using Baum-Welch algorithm
-        ai_models = AiRecommendedMarkovModels()
-        ai_models.generate_models()
+        #TODO it crashes every time this code runs lines 95-96
+        #ai_models = AiRecommendedMarkovModels()
+        #ai_models.generate_models()
 
 
 

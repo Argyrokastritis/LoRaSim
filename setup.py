@@ -30,5 +30,5 @@ setuptools.setup(
         "Natural Language :: English"
     ],
     keywords='lora markov chain simulator',
-    python_requires='>=3.6',
+    python_requires='>=3.11',
 )
