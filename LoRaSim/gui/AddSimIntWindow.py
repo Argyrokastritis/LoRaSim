@@ -1,6 +1,7 @@
 import os
 from PyQt5 import QtWidgets, QtCore
 from LoRaSim.MarkovChain import MarkovChain
+from LoRaSim.gui.ExportToCSV import ExportToCSV
 from LoRaSim.gui.MarkovListItem import MarkovListItem
 
 
@@ -84,6 +85,10 @@ class AddSimIntWindow(QtWidgets.QDialog):
             model.loadFromFile(file)
             self.addModelWidget(model)
 
+        # Exports Markov models to CSV file
+        csv_exporter = ExportToCSV()
+        csv_exporter.ExportMarkovToCSV()
+
     def addModelWidget(self, model):
         """
             Adds a new MarkovListItem widget to the QListWidget for each Markov model.
@@ -125,8 +130,10 @@ class AddSimIntWindow(QtWidgets.QDialog):
             Returns:
             QPushButton: A QPushButton object.
         """
+
         btn = QtWidgets.QPushButton()
         btn.setText("Add to simulation")
         btn.clicked.connect(self.accept)
+        btn.setStyleSheet("background-color: #CCF6BF;")
         self.layout().addWidget(btn)
         return btn
