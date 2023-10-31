@@ -30,6 +30,7 @@ class AddSimIntWindow(QtWidgets.QDialog):
 
     def createIntView(self):
         view = QtWidgets.QListWidget()
+        view.setStyleSheet("background-color: #E4ECEA ;")
         self.layout().addWidget(view)
         return view
 

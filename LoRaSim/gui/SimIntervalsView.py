@@ -35,6 +35,10 @@ class SimIntervalsView(QtWidgets.QFrame):
         tab.setHorizontalHeaderLabels(['Start time (ms)', 'Duration (ms)', 'Model'])
         tab.horizontalHeader().setStretchLastSection(True)
         tab.resizeColumnsToContents()
+
+        # orange sub menu
+        tab.setStyleSheet("background-color:#E1F7F3 ;")
+
         self.layout().addWidget(tab)
         return tab
 

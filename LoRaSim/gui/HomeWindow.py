@@ -16,7 +16,8 @@ class HomeWindow(QtWidgets.QWidget):
         super(QtWidgets.QWidget, self).__init__()
         self.simulator = Simulator()
 
-        self.setWindowIcon(QtGui.QIcon('gui/LoRaSim.png'))
+        #self.setWindowIcon(QtGui.QIcon('gui/LoRaSim.png'))
+        self.setWindowIcon(QtGui.QIcon('img/LoRaSim.png'))
         self.setWindowTitle("LoRaSim - Home")
         self.setMinimumSize(400, 600)
         self.initUI()
@@ -27,7 +28,7 @@ class HomeWindow(QtWidgets.QWidget):
         self.plotOptPanel = self.createPlotOptPanel()
 
         self.start_btn = self.createStartBtn()
-        self.start_btn.setStyleSheet("background-color: #F4C2C2")
+        self.start_btn.setStyleSheet("background-color: #F4C2C2") #pink btn
 
 
     def createSimIntView(self):
