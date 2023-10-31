@@ -1,6 +1,7 @@
 import os
 from PyQt5 import QtWidgets, QtCore
 from LoRaSim.MarkovChain import MarkovChain
+from LoRaSim.gui.AiRecommendedMarkovModels import AiRecommendedMarkovModels
 from LoRaSim.gui.ExportToCSV import ExportToCSV
 from LoRaSim.gui.MarkovListItem import MarkovListItem
 
@@ -88,6 +89,12 @@ class AddSimIntWindow(QtWidgets.QDialog):
         # Exports Markov models to CSV file
         csv_exporter = ExportToCSV()
         csv_exporter.ExportMarkovToCSV()
+
+        # Generates new Markov models using Baum-Welch algorithm
+        ai_models = AiRecommendedMarkovModels()
+        ai_models.generate_models()
+
+
 
     def addModelWidget(self, model):
         """
