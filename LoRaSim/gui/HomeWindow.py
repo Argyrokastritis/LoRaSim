@@ -16,6 +16,7 @@ class HomeWindow(QtWidgets.QWidget):
         super(QtWidgets.QWidget, self).__init__()
         self.simulator = Simulator()
 
+        self.setWindowIcon(QtGui.QIcon('gui/LoRaSim.png'))
         self.setWindowTitle("LoRaSim - Home")
         self.setMinimumSize(400, 600)
         self.initUI()
