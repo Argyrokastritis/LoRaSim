@@ -7,7 +7,7 @@ Title,Description,TX Time (ms),P00,P01,P10,P11
 "Urban, 2km, DR5","Urban settings at 2km distance, operating at DR5",60,1.000,0.000,0.000,0.000
 "Urban, 2km, DR6","Urban settings at 2km distance, operating at DR6",36,1.000,0.000,0.000,0.000
 "Urban, 650m, DR0","Urban settings at 650m distance, operating at DR0",1500,0.000,1.000,0.010,0.990
-"Urban, 650m, DR1","Urban settings at 650m distance, operating at DR1",760,-1.000,-1.000,0.000,1.000
+"Urban, 650m, DR1","Urban settings at 650m distance, operating at DR1",760,0.001,0.001,0.000,1.000
 "Urban, 650m, DR2","Urban settings at 650m distance, operating at DR2",380,0.220,0.780,0.032,0.968
 "Urban, 650m, DR2, 60% DR2 interf.","Urban settings at 650m distance, operating at DR2 with DR2 interference at 60% rate",380,0.367,0.633,0.264,0.736
 "Urban, 650m, DR3","Urban settings at 650m distance, operating at DR3",190,0.361,0.639,0.390,0.610

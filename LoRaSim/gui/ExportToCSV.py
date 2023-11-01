@@ -32,11 +32,29 @@ class ExportToCSV:
                     title = lines[0].split('=')[1].strip()
                     description = lines[1].split('=')[1].strip()
                     tx_time = lines[2].split('=')[1].strip()
-                    p00 = lines[3].split('=')[1].strip()
-                    p01 = lines[4].split('=')[1].strip()
-                    p10 = lines[5].split('=')[1].strip()
-                    p11 = lines[6].split('=')[1].strip()
+                    p00 = (lines[3].split('=')[1].strip())
+                    p01 = (lines[4].split('=')[1].strip())
+                    p10 = (lines[5].split('=')[1].strip())
+                    p11 = (lines[6].split('=')[1].strip())
 
                     writer.writerow([title, description, tx_time, p00, p01, p10, p11])
 
-        print("Markov models exported to 'Markov models.csv'!")
+        print("Markov models exported to 'Markov models.csv' and may contain negative values!")
+
+        with open('Markov models.csv', 'r') as f:
+            reader = csv.reader(f)
+            header = next(reader)  # Read the header row
+            rows = []
+            for row in reader:
+                if float(row[3]) < 0:
+                    row[3] = '0.001'  # Set P00 to a small positive value
+                if float(row[4]) < 0:
+                    row[4] = '0.001'  # Set P01 to a small positive value
+                rows.append(row)
+
+        with open('Markov models.csv', 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+            writer.writerows(rows)
+
+        print("Markov models exported to the changed'Markov models.csv' and DON'T contain negative values anymore!")

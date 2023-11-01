@@ -92,8 +92,10 @@ class AddSimIntWindow(QtWidgets.QDialog):
 
         # Generates new Markov models using Baum-Welch algorithm
         #TODO it crashes every time this code runs lines 95-96 AKA need to be fixed
-        #ai_models = AiRecommendedMarkovModels()
-        #ai_models.generate_models()
+        ai_models = AiRecommendedMarkovModels()
+        ai_models.NonnegativeCheck()
+        ai_models.generate_models()
+        ai_models.CreateAImodelsinifiles()
 
 
 
