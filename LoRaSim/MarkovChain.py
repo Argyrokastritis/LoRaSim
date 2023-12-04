@@ -48,6 +48,6 @@ class MarkovChain:
         elif k == 'description':
             self.description = v
         elif k == 'tx_time':
-            self.tx_time = int(v)
+            self.tx_time = float(v)
         else:
             raise SyntaxError("Unknown key " + k + " for value " + v)

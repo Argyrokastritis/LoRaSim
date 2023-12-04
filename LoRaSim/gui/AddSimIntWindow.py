@@ -86,6 +86,27 @@ class AddSimIntWindow(QtWidgets.QDialog):
             model.loadFromFile(file)
             self.addModelWidget(model)
 
+
+        # Constructs path to Models directory
+        aigui_dir = os.path.dirname(os.path.realpath(__file__))
+        print("The aigui_dir variable has",aigui_dir)
+        aisim_dir = os.path.dirname(aigui_dir)
+        print("The aisim_dir variable has",aisim_dir)
+        aimod_dir = os.path.join(aisim_dir, 'AIModels')
+        print("The aimod_dir variable has",aimod_dir)
+
+
+        # Loads each Markov model from file and adds it to QListWidget
+        for f in sorted(os.listdir(aimod_dir)):
+            print("The f variable has:", f)
+            file = os.path.join(aimod_dir, f)
+            print("The file variable has", file)
+            aimodel = MarkovChain()
+            print("aimodel variable has:", aimodel)
+            #TX times arent added to ai models and crashes there because it doesnt find them.
+            aimodel.loadFromFile(file)
+            self.addModelWidget(aimodel)
+
         # Exports Markov models to CSV file
         csv_exporter = ExportToCSV()
         csv_exporter.ExportMarkovToCSV()
@@ -112,6 +133,8 @@ class AddSimIntWindow(QtWidgets.QDialog):
         container.setSizeHint(w.sizeHint())
         self.intView.addItem(container)
         self.intView.setItemWidget(container, w)
+
+
 
     def createDurationSpinner(self):
         """
