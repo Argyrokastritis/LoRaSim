@@ -1,9 +1,3 @@
-'''
-    SimIntervalsView.py - A QFrame to display currently scheduled
-    simulation intervals and add new ones.
-    Created by Alessandro Sartori, September 2020.
-'''
-
 from PyQt5 import QtWidgets
 from LoRaSim.gui.AddSimIntWindow import AddSimIntWindow
 

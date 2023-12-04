@@ -1,7 +1,6 @@
 '''
     SimIntervals.py - Represents a sequence of simulation intervals
     in which a particular Markov Chain is used as model.
-    Created by Alessandro Sartori, September 2020.
 '''
 
 from LoRaSim.MarkovChain import MarkovChain
