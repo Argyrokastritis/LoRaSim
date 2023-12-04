@@ -1,10 +1,4 @@
-'''
-    HomeWindow.py - The main window of the simulator
-    Created by Alessandro Sartori, September 2020.
-'''
-
 from PyQt5 import QtWidgets, QtGui
-
 from LoRaSim.Simulator import Simulator
 from LoRaSim.gui.SimIntervalsView import SimIntervalsView
 from LoRaSim.gui.PlotOptPanel import PlotOptPanel
